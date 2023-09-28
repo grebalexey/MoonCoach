@@ -1,0 +1,155 @@
+$backgroundColor: #EFEEE8;
+$textColor: #333;
+$textFontFamily: Oxygen, sans-serif;
+$titleFontFamily: Libre Baskerville, sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background-color: $backgroundColor;
+    font-family: $textFontFamily;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    padding: 0 100px;
+}
+
+header{
+    flex: 0 0 auto;
+    border-bottom: 1px solid #333;
+}
+
+main{
+    flex: 1 0 auto;
+}
+
+footer{
+    flex: 0 0 auto;
+}
+
+.header__logo{
+    img{
+        padding: 24px 0 21px 0;
+    }
+}
+
+.header__row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-menu__list{
+    display: flex;
+    align-items: center;
+    margin-left: 364px;
+    margin-right: 39px;
+}
+
+.menu-list__items{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 20px 10px 20px 16px;
+}
+
+.header__get{
+    display: flex;
+    align-items: center;
+    padding-left: 33px;
+    border-left: 1px solid #333;
+    height: 100%;
+}
+
+.header-get__text{
+    margin-right: 32px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+button{
+    background: #333;
+    color: #EFEEE8;
+    font-family: $titleFontFamily;
+
+}
+
+// .main__start{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+.main-start{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title{
+        color: #333;
+        text-align: center;
+        font-family: $titleFontFamily;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 73.6px; 
+        margin-top: 94px;
+    }
+
+    &__desc{
+        color: #333;
+        text-align: center;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36.3px;
+        margin-top: 29px;
+        margin-bottom: 35px;
+    }
+
+    &__button{
+        width: 242px;
+        height: 64px;
+        margin-bottom: 80px;
+
+        svg{
+            margin-left: 50px;
+        }
+    }
+
+    &__examples{
+        background: $textColor;
+        height: 700px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__colomn{
+        width: 33.3%;
+    }
+}
+
+
+
+
+
