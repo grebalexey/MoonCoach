@@ -67,6 +67,8 @@ footer {
 }
 .menu-list__items a {
   color: #333;
+  display: flex;
+  align-items: center;
 }
 
 .header__get a {
@@ -94,6 +96,19 @@ button {
   background: #333;
   color: #EFEEE8;
   font-family: Libre Baskerville, sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button svg {
+  fill: #EFEEE8;
+}
+button:hover {
+  background: #EFEEE8;
+  color: #333;
+}
+button:hover svg {
+  stroke: #333;
+  fill: #333;
 }
 
 .main-start__container {

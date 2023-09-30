@@ -74,6 +74,8 @@ footer{
 
     a{
         color: #333;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -104,8 +106,27 @@ button{
     background: #333;
     color: #EFEEE8;
     font-family: $titleFontFamily;
+    cursor: pointer;
+    transition: 0.3s;
+
+    svg{
+        fill: #EFEEE8;
+    }
+
+    &:hover{
+        background: #EFEEE8;
+        color: #333;
+
+        svg{
+            stroke: #333;
+            fill: #333;
+        }
+    }
+
 
 }
+
+
 
 // .main__start{
 //     display: flex;
