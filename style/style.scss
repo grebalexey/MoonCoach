@@ -13,6 +13,10 @@ ul{
     list-style: none;
 }
 
+a{
+    text-decoration: none;
+}
+
 html{
     height: 100%;
 }
@@ -67,14 +71,25 @@ footer{
     font-weight: 400;
     line-height: 20px;
     padding: 20px 10px 20px 16px;
+
+    a{
+        color: #333;
+    }
 }
 
-.header__get{
+
+
+.header__get a{
     display: flex;
     align-items: center;
-    padding-left: 33px;
+    padding: 30px 0 29px 33px;
     border-left: 1px solid #333;
     height: 100%;
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
 }
 
 .header-get__text{
@@ -103,6 +118,11 @@ button{
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        &-bottom{
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__title{
@@ -137,7 +157,7 @@ button{
         }
     }
 
-    &__examples{
+    &__bottom{
         background: $textColor;
         height: 700px;
         width: 100%;
@@ -146,10 +166,307 @@ button{
 
     &__colomn{
         width: 33.3%;
+
+        img + img{
+            margin-top: 32px;
+        }
     }
 }
 
+.main__facts{
+    margin-top: 101px;
+    margin-bottom: 196px;
+}
 
+.main-facts{
+    &__container{
+        display: flex;
+        align-items: center;
+    }
+
+    &__right{
+        margin-left: 101px;
+    }
+
+    &__title{
+        color: #333;
+        font-family: $titleFontFamily;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px; 
+        margin-bottom: 28px;
+    }
+
+    &__desc{
+        color: rgba(51, 51, 51, 0.90);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29.7px;
+        margin-bottom: 51px;
+    }
+
+    &__list{
+        color: #333;
+        font-family: Oxygen;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 23.1px;
+        text-transform: uppercase;
+        margin-bottom: 62px;
+    }
+
+    &__list-items{
+        color: #333;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26.4px;
+        text-transform: lowercase;
+        border-bottom: 1px solid #333;
+        padding-bottom: 16px;
+        padding-top: 19px;
+    }
+
+    &__button{
+        width: 215px;
+        height: 48px;
+
+        svg{
+            margin-left: 32px;
+        }
+    }
+}
+
+.page__section{
+    padding-bottom: 8px;
+
+    & + &{
+        padding-top: 50px;
+        border-top: 1px solid rgba(51, 51, 51, 0.10);
+    }
+
+
+    &-title{
+        color: #333;
+        font-family: $titleFontFamily;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+        margin-bottom: 28px;
+    }
+
+    &-desc{
+        color: rgba(51, 51, 51, 0.90);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29.7px;
+        width: 51%;
+        margin-bottom: 43px;
+    }
+
+    &-cards{
+        display: flex;
+        align-items: center;
+        margin-left: -32px;
+        flex-wrap: wrap;
+    }
+
+    
+
+
+}
+
+.section-cards{
+    &__item{
+            padding-left: 32px;
+            padding-bottom: 32px;
+            width: 33.3%;
+    }
+
+    &__inner{
+        padding: 24px 24px 30px 24px;
+        background: #E4E2D3;
+    }
+
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 22px;
+        color: #333;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; 
+    }
+
+}
+
+.main-question{
+    &__container{
+        padding: 0 220px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 80px;
+    }
+
+    &__right{
+        margin-left: 54px;
+    }
+
+    &__title{
+        color: #333;
+        font-family: $titleFontFamily;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+        margin-bottom: 25px;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input{
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(51, 51, 51, 0.80);
+        padding: 16px 0 16px 34px;
+        color: #333;
+        font-family: $titleFontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21.28px;
+
+        & + &{
+            margin-top: 15px;
+        }
+
+        &::placeholder{
+            color: #333;
+            font-family: $titleFontFamily;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21.28px;
+        }
+    }
+
+    &__button{
+        padding: 15px;
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+
+.footer{
+    border-top: 1px solid #333;
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+
+        img{
+            margin-top: 84px;
+        }
+
+        svg{
+            margin-top: 93px;
+
+            & + &{
+                margin-left: 16px;
+            }
+        }
+    }
+
+    &__middle{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 90px;
+        margin-bottom: 134px;
+    }
+
+    &__text{
+        width: 32.3%;
+        color: #333;
+        font-family: $titleFontFamily;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28.6px;
+    }
+
+    &__menu{
+        margin-top: 16px;
+        display: flex;
+
+        &-topics{
+            color: #333;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px; 
+
+            & + &{
+                margin-left: 80px;
+            }
+        }
+
+        &-links{
+            margin-top: 24px;
+
+
+            a{
+            color: #333;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            } 
+        
+        
+            
+        }
+    }
+
+    &__bottom{
+        color: #333;
+        font-family: $titleFontFamily;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+
+        span{
+            display: block;
+        }
+
+
+        a{
+            display: block;
+            color: #333;
+            font-family: $titleFontFamily;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        svg{
+            margin: 0 8px;
+        }
+    }
+}
 
 
 
