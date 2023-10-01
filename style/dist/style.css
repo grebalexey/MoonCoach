@@ -40,20 +40,31 @@ footer {
   flex: 0 0 auto;
 }
 
+.header__container {
+  padding: 0 52px;
+}
+.header__logo {
+  width: 14%;
+  flex-shrink: 0;
+}
 .header__logo img {
   padding: 24px 0 21px 0;
+  width: 100%;
 }
-
 .header__row {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.header__menu {
+  display: grid;
+  justify-items: end;
+  width: 100%;
+}
 
 .header-menu__list {
   display: flex;
   align-items: center;
-  margin-left: 364px;
   margin-right: 39px;
 }
 
@@ -65,10 +76,24 @@ footer {
   line-height: 20px;
   padding: 20px 10px 20px 16px;
 }
+.menu-list__items svg {
+  transition: 0.3s;
+}
+.menu-list__items:hover svg {
+  transform: rotate(180deg);
+}
+@media (max-width: 992px) {
+  .menu-list__items {
+    font-size: 12px;
+  }
+}
 .menu-list__items a {
   color: #333;
   display: flex;
   align-items: center;
+}
+.menu-list__items-last {
+  border-left: 1px solid #333;
 }
 
 .header__get a {
@@ -86,10 +111,6 @@ footer {
 
 .header-get__text {
   margin-right: 32px;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
 }
 
 button {
@@ -119,6 +140,7 @@ button:hover svg {
 .main-start__container-bottom {
   display: flex;
   align-items: center;
+  margin-left: -32px;
 }
 .main-start__title {
   color: #333;
@@ -130,6 +152,11 @@ button:hover svg {
   line-height: 73.6px;
   margin-top: 94px;
 }
+@media (max-width: 992px) {
+  .main-start__title {
+    font-size: 50px;
+  }
+}
 .main-start__desc {
   color: #333;
   text-align: center;
@@ -139,6 +166,11 @@ button:hover svg {
   line-height: 36.3px;
   margin-top: 29px;
   margin-bottom: 35px;
+}
+@media (max-width: 992px) {
+  .main-start__desc {
+    font-size: 18px;
+  }
 }
 .main-start__button {
   width: 242px;
@@ -150,12 +182,15 @@ button:hover svg {
 }
 .main-start__bottom {
   background: #333;
-  height: 700px;
   width: 100%;
   overflow: hidden;
 }
 .main-start__colomn {
   width: 33.3%;
+  padding-left: 32px;
+}
+.main-start__colomn img {
+  width: 100%;
 }
 .main-start__colomn img + img {
   margin-top: 32px;
@@ -165,13 +200,36 @@ button:hover svg {
   margin-top: 101px;
   margin-bottom: 196px;
 }
+@media (max-width: 1200px) {
+  .main__facts {
+    margin-bottom: 100px;
+  }
+}
 
 .main-facts__container {
   display: flex;
   align-items: center;
 }
+.main-facts__left {
+  width: 50%;
+}
+.main-facts__left img {
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .main-facts__left {
+    display: none;
+  }
+}
 .main-facts__right {
-  margin-left: 101px;
+  width: 50%;
+  padding-left: 101px;
+}
+@media (max-width: 992px) {
+  .main-facts__right {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 .main-facts__title {
   color: #333;
@@ -181,6 +239,11 @@ button:hover svg {
   font-weight: 700;
   line-height: 48px;
   margin-bottom: 28px;
+}
+@media (max-width: 1200px) {
+  .main-facts__title {
+    font-size: 30px;
+  }
 }
 .main-facts__desc {
   color: rgba(51, 51, 51, 0.9);
@@ -235,6 +298,11 @@ button:hover svg {
   line-height: 48px;
   margin-bottom: 28px;
 }
+@media (max-width: 1200px) {
+  .page__section-title {
+    font-size: 30px;
+  }
+}
 .page__section-desc {
   color: rgba(51, 51, 51, 0.9);
   font-size: 18px;
@@ -243,6 +311,11 @@ button:hover svg {
   line-height: 29.7px;
   width: 51%;
   margin-bottom: 43px;
+}
+@media (max-width: 992px) {
+  .page__section-desc {
+    width: 80%;
+  }
 }
 .page__section-cards {
   display: flex;
@@ -259,6 +332,24 @@ button:hover svg {
 .section-cards__inner {
   padding: 24px 24px 30px 24px;
   background: #E4E2D3;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.section-cards__inner:hover {
+  border: 1px solid #333;
+  transform: scale(1.1);
+}
+@media (max-width: 992px) {
+  .section-cards__inner {
+    padding: 14px 14px 20px 14px;
+  }
+}
+.section-cards__photo {
+  width: 100%;
+}
+.section-cards__photo img {
+  width: 100%;
 }
 .section-cards__row {
   display: flex;
@@ -271,6 +362,12 @@ button:hover svg {
   font-weight: 400;
   line-height: 20px;
 }
+@media (max-width: 992px) {
+  .section-cards__row {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+}
 
 .main-question__container {
   padding: 0 220px;
@@ -278,8 +375,20 @@ button:hover svg {
   align-items: center;
   margin-bottom: 80px;
 }
+@media (max-width: 992px) {
+  .main-question__container {
+    padding: 0 130px;
+  }
+}
+.main-question__left {
+  width: 50%;
+}
+.main-question__left img {
+  width: 100%;
+}
 .main-question__right {
-  margin-left: 54px;
+  width: 50%;
+  padding-left: 54px;
 }
 .main-question__title {
   color: #333;
@@ -289,6 +398,16 @@ button:hover svg {
   font-weight: 700;
   line-height: 48px;
   margin-bottom: 25px;
+}
+@media (max-width: 1200px) {
+  .main-question__title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .main-question__title {
+    font-size: 22px;
+  }
 }
 .main-question__form {
   display: flex;
@@ -306,6 +425,16 @@ button:hover svg {
   font-weight: 400;
   line-height: 21.28px;
 }
+@media (max-width: 1200px) {
+  .main-question__input {
+    font-size: 13px;
+  }
+}
+@media (max-width: 992px) {
+  .main-question__input {
+    padding: 8px 0 8px 20px;
+  }
+}
 .main-question__input + .main-question__input {
   margin-top: 15px;
 }
@@ -316,6 +445,11 @@ button:hover svg {
   font-style: normal;
   font-weight: 400;
   line-height: 21.28px;
+}
+@media (max-width: 1200px) {
+  .main-question__input::placeholder {
+    font-size: 13px;
+  }
 }
 .main-question__button {
   padding: 15px;
@@ -339,11 +473,31 @@ button:hover svg {
 .footer__top svg + .footer__top svg {
   margin-left: 16px;
 }
+.footer__networks-item {
+  color: #EFEEE8;
+}
+.footer__networks-item svg {
+  transition: 0.3s;
+  --colorBody: #333;
+}
+.footer__networks-item svg path {
+  stroke: #333;
+}
+.footer__networks-item:hover svg {
+  stroke: #EFEEE8;
+  fill: #EFEEE8;
+}
 .footer__middle {
   display: flex;
   justify-content: space-between;
   margin-top: 90px;
   margin-bottom: 134px;
+}
+@media (max-width: 992px) {
+  .footer__middle {
+    margin-top: 40px;
+    margin-bottom: 63px;
+  }
 }
 .footer__text {
   width: 32.3%;
@@ -353,6 +507,11 @@ button:hover svg {
   font-style: normal;
   font-weight: 400;
   line-height: 28.6px;
+}
+@media (max-width: 992px) {
+  .footer__text {
+    font-size: 16px;
+  }
 }
 .footer__menu {
   margin-top: 16px;
@@ -368,8 +527,23 @@ button:hover svg {
 .footer__menu-topics + .footer__menu-topics {
   margin-left: 80px;
 }
+@media (max-width: 992px) {
+  .footer__menu-topics + .footer__menu-topics {
+    margin-left: 49px;
+  }
+}
 .footer__menu-links {
   margin-top: 24px;
+}
+@media (max-width: 992px) {
+  .footer__menu-links {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 850px) {
+  .footer__menu-links {
+    display: none;
+  }
 }
 .footer__menu-links a {
   color: #333;
