@@ -88,6 +88,7 @@ footer{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
     }
 
     &__menu{
@@ -103,38 +104,90 @@ footer{
     margin-right: 39px;
 }
 
-.menu-list__items{
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-    padding: 20px 10px 20px 16px;
-
-    svg{
-        transition: 0.3s;
-    }
-
-    &:hover svg{
-        transform: rotate(180deg);
-    }
-
-    @include _992{
-        font-size: 12px;
-    }
-
-    a{
-        color: #333;
+.menu-list{
+    &__items{
         display: flex;
         align-items: center;
-    }
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 20px 10px 20px 16px;
 
-    &-last{
-        border-left: 1px solid #333;
+        &:hover .menu-list__items-nextlist{
+            transform: rotateX(0);
+            transition: 1s;
+        }
+
+        &-nextlist{
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: #E4E2D3;
+            z-index: 10;
+            padding: 15px 20px 50px 0px;
+            justify-content: space-between;
+            transition: .3s;
+            transform: rotateX(90deg);
+            transform-origin: 0 0;
+            border: 1px solid #333;
+        }
+
+        &-nextitems{
+            flex-shrink: 0;
+            width: 33.3%;
+            margin-top: 20px;
+
+            // & + &{
+            //     margin-left: 100px;
+            // }
+            
+            a{
+                display: flex;
+                flex-direction: column;
+                margin-left: 20px;
+                transition: 0.3s;
+
+                &:hover{
+                    scale: 1.1;
+                }
+
+                img{
+                    margin-top: 10px;
+                    width: 100%;
+                }
+            }
+
+        }
+
+        svg{
+            transition: 0.3s;
+        }
+
+        &:hover svg{
+            transform: rotate(180deg);
+        }
+
+        @include _992{
+            font-size: 12px;
+        }
+
+        a{
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        &-last{
+            border-left: 1px solid #333;
+        }
+
+
     }
 }
-
-
 
 .header__get a{
     display: flex;
@@ -569,23 +622,26 @@ button{
         
 
         &-item{
-            color: #EFEEE8;
-
             svg{
-                transition: 0.3s;
-                --colorBody: #333;
+                transition: .3s;
+            }
 
-                & path{
-                    stroke: #333;
-                }
+            .networks-item__circle{
+                stroke: #333;
+            }
+
+            .networks-item__object{
+                fill: #333;
 
             }
 
             &:hover svg{
-                stroke: #EFEEE8;
-                fill: #EFEEE8;
+                .networks-item__object{
+                    fill: #EFEEE8;
+                    stroke: #333;
+    
+                }
             }
-
         }
 
         
