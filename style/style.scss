@@ -53,6 +53,10 @@ body{
 
 .container{
     padding: 0 100px;
+
+    @include _850{
+        padding: 0 50px;
+    }
 }
 
 header{
@@ -78,6 +82,10 @@ footer{
         width: 14%;
         flex-shrink: 0;
 
+        @include _850{
+            width: auto;
+        }
+
         img{
             padding: 24px 0 21px 0;
             width: 100%;
@@ -95,6 +103,10 @@ footer{
         display: grid;
         justify-items: end;
         width: 100%;
+
+        @include _850{
+            display: none;
+        }
     }
 }
 
@@ -128,7 +140,7 @@ footer{
             align-items: center;
             background-color: #E4E2D3;
             z-index: 10;
-            padding: 15px 20px 50px 0px;
+            padding: 15px 20px 90px 0px;
             justify-content: space-between;
             transition: .3s;
             transform: rotateX(90deg);
@@ -183,6 +195,8 @@ footer{
 
         &-last{
             border-left: 1px solid #333;
+
+            
         }
 
 
@@ -296,6 +310,10 @@ button{
         // height: 700px;
         width: 100%;
         overflow: hidden;
+
+        @include _850{
+            display: none;
+        }
     }
 
     &__colomn{
@@ -318,6 +336,10 @@ button{
 
     @include _1200{
         margin-bottom: 100px;
+    }
+
+    @include _850{
+        margin-top: 0;
     }
 }
 
@@ -447,6 +469,10 @@ button{
         align-items: center;
         margin-left: -32px;
         flex-wrap: wrap;
+
+        @include _850{
+            display: block;
+        }
     }
 
     
@@ -459,6 +485,10 @@ button{
             padding-left: 32px;
             padding-bottom: 32px;
             width: 33.3%;
+
+            @include _850{
+                width: 70%;
+            }
     }
 
     &__inner{
@@ -514,6 +544,10 @@ button{
 
         @include _992{
             padding: 0 130px;
+        }
+
+        @include _850{
+            padding: 0 50px;
         }
     }
 
@@ -673,11 +707,23 @@ button{
         @include _992{
             font-size: 16px;
         }
+
+        @include _850{
+            width: 50%;
+        }
     }
 
     &__menu{
         margin-top: 16px;
         display: flex;
+        flex-shrink: 0;
+
+        @include _850{
+            margin-top: 0;
+            width: 50%;
+            display: block;
+            padding-left: 70px;
+        }
 
         &-topics{
             color: #333;
@@ -685,14 +731,17 @@ button{
             font-style: normal;
             font-weight: 700;
             line-height: 20px; 
+            margin-left: 80px;
 
-            & + &{
-                margin-left: 80px;
-
-                @include _992{
-                    margin-left: 49px
-                }
+            @include _1200{
+                margin-left: 49px
             }
+
+            @include _850{
+                margin-left: 0;
+                margin-bottom: 15px;
+            }
+            
         }
 
         &-links{
