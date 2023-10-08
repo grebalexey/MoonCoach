@@ -823,6 +823,12 @@ button{
         line-height: 20px;
         display: flex;
         align-items: center;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+
+        @include _850{
+            font-size: 11px;
+        }
 
         span{
             display: block;

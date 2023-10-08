@@ -711,6 +711,13 @@ button:hover svg {
   line-height: 20px;
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+@media (max-width: 850px) {
+  .footer__bottom {
+    font-size: 11px;
+  }
 }
 .footer__bottom span {
   display: block;
