@@ -82,16 +82,16 @@ footer {
   justify-items: end;
   width: 100%;
 }
-@media (max-width: 850px) {
-  .header__menu {
-    display: none;
-  }
-}
 
 .header-menu__list {
   display: flex;
   align-items: center;
   margin-right: 39px;
+}
+@media (max-width: 850px) {
+  .header-menu__list {
+    display: none;
+  }
 }
 
 .menu-list__items {
@@ -176,6 +176,15 @@ footer {
 
 .header-get__text {
   margin-right: 32px;
+}
+
+.header-menu__burger {
+  display: none;
+}
+@media (max-width: 850px) {
+  .header-menu__burger {
+    display: block;
+  }
 }
 
 button {

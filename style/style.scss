@@ -117,9 +117,7 @@ footer{
         justify-items: end;
         width: 100%;
 
-        @include _850{
-            display: none;
-        }
+        
     }
 }
 
@@ -127,6 +125,10 @@ footer{
     display: flex;
     align-items: center;
     margin-right: 39px;
+
+    @include _850{
+        display: none;
+    }
 }
 
 .menu-list{
@@ -231,6 +233,14 @@ footer{
 
 .header-get__text{
     margin-right: 32px;
+}
+
+.header-menu__burger{
+    display: none;
+
+    @include _850{
+        display: block;
+    }
 }
 
 button{
