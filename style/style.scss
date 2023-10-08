@@ -83,6 +83,7 @@ footer{
 
 
 .header{
+
     &__container{
         padding: 0 52px;
         
@@ -788,6 +789,7 @@ button{
             font-weight: 700;
             line-height: 20px; 
             margin-left: 80px;
+            cursor: pointer;
 
             @include _1200{
                 margin-left: 49px
@@ -802,6 +804,7 @@ button{
 
         &-links{
             margin-top: 24px;
+            
 
             @include _992{
                 margin-top: 16px;
@@ -817,6 +820,22 @@ button{
             font-style: normal;
             font-weight: 400;
             line-height: 20px;
+            position: relative;
+
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background-color: #333;
+                transition: width 0.3s ease-out;
+            }
+
+            &:hover:after{
+                width: 100%;
+            }
             } 
         
         

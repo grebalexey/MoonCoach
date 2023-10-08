@@ -11,7 +11,7 @@ const scrollToOtherpages = document.getElementById('scrollToOtherpages');
 
 
 scrollToHomepages.addEventListener('click', function(){
-    console.log(2);
+    console.log(1);
     mainHomepages.scrollIntoView({behavior: "smooth"});
 } )
 
@@ -32,9 +32,4 @@ scrollToOtherpages.addEventListener('click', function(){
 
 
 
-
-// = function(){
-//     console.log(2);
-//     mainAboutpages.scrollIntoView({behavior: "smooth"});
-// }
 
