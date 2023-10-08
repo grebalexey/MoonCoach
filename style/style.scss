@@ -21,6 +21,11 @@ $titleFontFamily: Libre Baskerville, sans-serif;
     }
 }
 
+@mixin _576{
+    @media (max-width: 576px){
+        @content;
+    }
+}
 
 *{
     margin: 0;
@@ -57,6 +62,10 @@ body{
     @include _850{
         padding: 0 50px;
     }
+
+    @include _576{
+        padding: 0 21px;
+    }
 }
 
 header{
@@ -76,6 +85,10 @@ footer{
 .header{
     &__container{
         padding: 0 52px;
+        
+        @include _576{
+            padding: 0 21px;
+        }
     }
 
     &__logo{
@@ -277,6 +290,10 @@ button{
 
         @include _992{
             font-size: 50px;
+        }
+
+        @include _576{
+            font-size: 39px;
         }
     }
 
@@ -489,6 +506,10 @@ button{
             @include _850{
                 width: 70%;
             }
+
+            @include _576{
+                width: 90%;
+            }
     }
 
     &__inner{
@@ -549,10 +570,18 @@ button{
         @include _850{
             padding: 0 50px;
         }
+
+        @include _576{
+            padding: 0 21px;
+        }
     }
 
     &__left{
         width: 50%;
+
+        @include _850{
+            display: none;
+        }
 
         img{
             width: 100%;
@@ -562,6 +591,15 @@ button{
     &__right{
         width: 50%;
         padding-left: 54px;
+
+        @include _850{
+            padding-left: 0;
+            width: 70%;
+        }
+
+        @include _576{
+            width: 90%;
+        }
     }
 
     &__title{
@@ -639,21 +677,29 @@ button{
         display: flex;
         justify-content: space-between;
 
+        @include _576{
+            display: block;
+        }
+
         img{
             margin-top: 84px;
+
+            @include _576{
+                margin-top: 12px;
+            }
         }
 
         svg{
             margin-top: 93px;
 
-            & + &{
-                margin-left: 16px;
+            @include _576{
+                margin-top: 12px;
             }
+
         }
     }
 
     &__networks {
-        
 
         &-item{
             svg{
