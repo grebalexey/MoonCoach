@@ -149,7 +149,7 @@
                         </li>
                     </ul>
                     <div class="header-menu__burger">
-                        <div class="header-mrnu__burger--default">
+                        <div class="header-menu__burger--default">
                             <svg width="50" height="34" viewBox="0 0 50 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 0H50V7.55556H0V0Z" fill="#333333"/>
                                 <path d="M0 13.2222H50V20.7778H0V13.2222Z" fill="#333333"/>
@@ -230,7 +230,7 @@
                     <div class="page__section-title">Homepages</div>
                     <div class="page__section-desc">The homepage is the face of your business. Select one from three minimalistic and subtly animated homepages, to introduce your users to what you're doing.</div>
                     <div class="page__section-cards">
-                            <div class="section-cards__item">
+                            <div class="cardHomepage1 section-cards__item">
                                 <div class="section-cards__inner">
                                     <div class="section-cards__photo">
                                         <img src="images/home1.jpg" alt="">
@@ -245,7 +245,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="section-cards__item">
+                            <div class="cardHomepage2 section-cards__item">
                                 <div class="section-cards__inner">
                                     <div class="section-cards__photo">
                                         <img src="images/home2.jpg" alt="">
@@ -260,7 +260,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="section-cards__item">
+                            <div class="cardHomepage3 section-cards__item">
                                 <div class="section-cards__inner">
                                     <div class="section-cards__photo">
                                         <img src="images/home3.jpg" alt="">
@@ -532,7 +532,7 @@
                     Hey, I'm Maria Gonzalez and I offer life coaching of the future with personalized plan to achieve innner balance.
                 </div>
                 <ul class="footer__menu">
-                    <ul class="footer__menu-topics">
+                    <ul class="footer__menu-topics" id="scrollToHomepages">
                         Homepages
                         <li class="footer__menu-links"><a href="">Home V1</a> </li>
                         <li class="footer__menu-links"><a href="">Home V2</a> </li>
@@ -574,6 +574,27 @@
             </div>
         </div>
     </footer>
+    
+    <div class="g-hidden">
+        <div class="modal" id="modalHomepages">
+            <div class="modal__title">Homepages</div>
+            <div class="modal__content">
+                <div class="modal__content-left">
+                    <img src="images/home1.jpg" alt="">
+                </div>
+                <div class="modal__content-right">
+                    <div class="modal__content-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi accusantium veniam vel, quibusdam impedit eum corporis excepturi! Minima omnis eum esse possimus soluta, nobis praesentium inventore sapiente quod fugit.
+                    </div>
+                    <button class="button modal__button">
+                        Buy template
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="16" viewBox="0 0 38 16" fill="none">
+                            <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928934C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM5 9L33 9L33 7L5 7L5 9Z"/>
+                        </svg>
+                    </button>
+                </div>    
+            </div>
+        </div>
     
 
     <script src="script/script.js"></script>

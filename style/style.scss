@@ -880,4 +880,78 @@ button{
     }
 }
 
+.g-hidden{
+    
+    &::before{
+        content: '';
+        background: #000;
+        position: fixed; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%;
+        opacity: 0.7;
+    }
+}
 
+.modal{
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, - 50%);
+    background-color: #EFEEE8;
+    width: 100%;
+    padding: 10px 50px 30px 50px;
+
+    // ::before{
+    //     content: '';
+    //     background: #000;
+    //     position: fixed; 
+    //     left: 0;
+    //     top: 0;
+    //     width: 100%; 
+    //     height: 100%;
+    //     opacity: 0.7;
+    //     z-index: 9999;
+    // }
+
+    &__title{
+        color: #333;
+        font-family: Libre Baskerville, sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+        margin-bottom: 28px;
+    }
+
+    &__content{
+        display: flex;
+        align-items: flex-start;
+
+        &-right{
+            margin-left: 15px;
+        }
+
+        &-desc{
+            color: #333;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26.4px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__button{
+        padding: 10px;
+    }
+}
+
+.modal.js-active{
+    opacity: 1;
+    visibility: visible;
+}

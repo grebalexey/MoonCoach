@@ -1,3 +1,5 @@
+// прокрутка до раздела
+
 const mainHomepages = document.getElementById('mainHomepages');
 const mainAboutpages = document.getElementById('mainAboutpages');
 const mainBlogpages = document.getElementById('mainBlogpages');
@@ -31,5 +33,27 @@ scrollToOtherpages.addEventListener('click', function(){
 } )
 
 
+
+// модальные окна
+// Homepage1
+
+let addModalHomepages1 = document.querySelector('.cardHomepage1');
+let modal = document.querySelector('.modal');
+
+addModalHomepages1.addEventListener('click', function(){
+
+    if(!modal.classList.contains("js-active")){
+        setTimeout(() => {
+            modal.classList.add("js-active");
+        })
+        
+        
+    }
+})
+
+function closeModal(modal){
+    modal.classList.remove("js-active");
+
+}
 
 
