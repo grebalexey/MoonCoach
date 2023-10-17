@@ -39,21 +39,36 @@ scrollToOtherpages.addEventListener('click', function(){
 
 let addModalHomepages1 = document.querySelector('.cardHomepage1');
 let modal = document.querySelector('.modal');
+let wrap = document.querySelector('.g-hidden::before')
 
 addModalHomepages1.addEventListener('click', function(){
 
     if(!modal.classList.contains("js-active")){
         setTimeout(() => {
             modal.classList.add("js-active");
+            wrap.classList.add("g-hidden-active");
         })
         
         
     }
 })
 
-function closeModal(modal){
-    modal.classList.remove("js-active");
+// function closeModal(modal){
+//     modal.classList.remove("js-active");
 
-}
+// }
+
+// function closeModal(modal){
+//     modal.classList.remove("js-active");
+
+// }
+
+// document.addEventListener('click', function(event){
+//     console.log(event);
+
+//     if(!modal.contains(event.target) && modal.classList.contains("js-active")){
+//         closeModal(modal);
+//     }
+// })
 
 
