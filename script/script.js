@@ -35,40 +35,30 @@ scrollToOtherpages.addEventListener('click', function(){
 
 
 // модальные окна
-// Homepage1
+// Home version1
 
-let addModalHomepages1 = document.querySelector('.cardHomepage1');
+let modalCallList = document.querySelector('.menu-list__items-nextitems');
+let modalCallCard = document.querySelector('.cardHomepage1');
 let modal = document.querySelector('.modal');
-let wrap = document.querySelector('.g-hidden::before')
+let overlayClose = document.querySelector('.modal__overlay');
+let crossClose = document.querySelector('.modal__cross')
 
-addModalHomepages1.addEventListener('click', function(){
-
-    if(!modal.classList.contains("js-active")){
-        setTimeout(() => {
-            modal.classList.add("js-active");
-            wrap.classList.add("g-hidden-active");
-        })
-        
-        
-    }
+modalCallList.addEventListener('click', function(modalOpen){
+    modal.classList.add('modal--active');
 })
 
-// function closeModal(modal){
-//     modal.classList.remove("js-active");
+modalCallCard.addEventListener('click', function(modalOpen){
+    modal.classList.add('modal--active');
+})
 
-// }
+overlayClose.addEventListener('click', function(modalClose){
+    modal.classList.remove('modal--active');
+})
 
-// function closeModal(modal){
-//     modal.classList.remove("js-active");
+crossClose.addEventListener('click', function(modalClose){
+    modal.classList.remove('modal--active');
+})
 
-// }
 
-// document.addEventListener('click', function(event){
-//     console.log(event);
-
-//     if(!modal.contains(event.target) && modal.classList.contains("js-active")){
-//         closeModal(modal);
-//     }
-// })
 
 

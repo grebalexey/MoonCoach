@@ -575,26 +575,38 @@
         </div>
     </footer>
     
-    <div class="g-hidden">
-        <div class="modal" id="modalHomepages">
-            <div class="modal__title">Homepages</div>
-            <div class="modal__content">
-                <div class="modal__content-left">
-                    <img src="images/home1.jpg" alt="">
+    <div class="modal">
+        <div class="container modal__container">
+            <div class="modal__inner">
+                <div class="modal__cross">
+                    <img src="images/cross.svg" alt="">
                 </div>
-                <div class="modal__content-right">
-                    <div class="modal__content-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi accusantium veniam vel, quibusdam impedit eum corporis excepturi! Minima omnis eum esse possimus soluta, nobis praesentium inventore sapiente quod fugit.
+                <div class="modal__content">
+                    <div class="modal__iner-left">
+                        <img src="images/home1.jpg" alt="">
                     </div>
-                    <button class="button modal__button">
-                        Buy template
-                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="16" viewBox="0 0 38 16" fill="none">
-                            <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928934C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM5 9L33 9L33 7L5 7L5 9Z"/>
-                        </svg>
-                    </button>
-                </div>    
+                    <div class="modal__inner-right">
+                        <h1 class="modal__inner-title">
+                            Home Version 1
+                        </h1>
+                        <p class="modal__inner-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nesciunt vitae culpa possimus blanditiis cupiditate, optio deleniti voluptas voluptatibus? Aliquam fugit tempora quidem. Pariatur cumque ipsa voluptatibus maxime vitae blanditiis.
+                            Omnis iste reprehenderit blanditiis, accusantium dignissimos et sapiente tenetur sunt adipisci cupiditate facilis at neque placeat labore consequuntur sit totam ex vero. Maiores est quaerat dolorem? Illo velit itaque nostrum!
+                        </p>
+                        <button class="button modal__button">
+                            Buy template
+                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="16" viewBox="0 0 38 16" fill="none">
+                                <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928934C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM5 9L33 9L33 7L5 7L5 9Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
             </div>
         </div>
+        
+        <div class="modal__overlay"></div>
+    </div>
     
 
     <script src="script/script.js"></script>
