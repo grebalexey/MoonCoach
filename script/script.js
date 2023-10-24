@@ -37,27 +37,46 @@ scrollToOtherpages.addEventListener('click', function(){
 // модальные окна
 // Home version1
 
-let modalCallList = document.querySelector('.menu-list__items-nextitems');
-let modalCallCard = document.querySelector('.cardHomepage1');
-let modal = document.querySelector('.modal');
-let overlayClose = document.querySelector('.modal__overlay');
-let crossClose = document.querySelector('.modal__cross')
+let modalCallLists = document.querySelectorAll('.menu-list__items-nextitems');
+let modalCallCards = document.querySelectorAll('.section-cards__item');
+let modals = document.querySelectorAll('.modal');
+let overlayCloses = document.querySelectorAll('.modal__overlay');
+let crossCloses = document.querySelectorAll('.modal__cross')
 
-modalCallList.addEventListener('click', function(modalOpen){
-    modal.classList.add('modal--active');
+function modalOpen(event){
+    let modalID = event.target.getAttribute("data-target");
+    console.log(modalID);
+    let modal = document.getElementById(modalID);
+    console.log(modal);
+    if (modal){
+        console.log(modal);
+        modal.classList.add('modal--active');
+    }
+}
+
+modalCallCards.forEach(function(modalCallCard){
+    modalCallCard.addEventListener('click',modalOpen);
 })
 
-modalCallCard.addEventListener('click', function(modalOpen){
-    modal.classList.add('modal--active');
-})
 
-overlayClose.addEventListener('click', function(modalClose){
-    modal.classList.remove('modal--active');
-})
 
-crossClose.addEventListener('click', function(modalClose){
-    modal.classList.remove('modal--active');
-})
+// modalCallList.addEventListener('click', function(modalOpen){
+//     modal.classList.add('modal--active');
+// })
+
+
+
+// modalCallCards.addEventListener('click', function(modalOpen){
+//     modal.classList.add('modal--active');
+// })
+
+// overlayClose.addEventListener('click', function(modalClose){
+//     modal.classList.remove('modal--active');
+// })
+
+// crossClose.addEventListener('click', function(modalClose){
+//     modal.classList.remove('modal--active');
+// })
 
 
 
