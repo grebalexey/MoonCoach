@@ -37,14 +37,17 @@ scrollToOtherpages.addEventListener('click', function(){
 // модальные окна
 // Home version1
 
-let modalCallLists = document.querySelectorAll('.menu-list__items-nextitems');
+// let modalCallLists = document.querySelectorAll('.menu-list__items-nextitems');
 let modalCallCards = document.querySelectorAll('.section-cards__item');
 let modals = document.querySelectorAll('.modal');
-let overlayCloses = document.querySelectorAll('.modal__overlay');
+// let overlayCloses = document.querySelectorAll('.modal__overlay');
 let crossCloses = document.querySelectorAll('.modal__cross')
 
+console.log(modalCallCards);
+
 function modalOpen(event){
-    let modalID = event.target.getAttribute("data-target");
+    let modalCallCard = event.target;
+    let modalID = modalCallCard.getAttribute("data-target");
     console.log(modalID);
     let modal = document.getElementById(modalID);
     console.log(modal);
