@@ -42,7 +42,7 @@ let modals = document.querySelectorAll('.modal');
 let overlayCloses = document.querySelectorAll('.modal__overlay');
 let crossCloses = document.querySelectorAll('.modal__cross')
 
-// console.log(modalCallCards);
+// вызов из раздела
 
 modalCallCards.forEach(function(modalCallCard){
     // console.log(modalCallCard);
@@ -62,6 +62,8 @@ modalCallCards.forEach(function(modalCallCard){
         }
     });
 })
+
+// вызов из меню
 
 modalCallLists.forEach(function(modalCallList){
     // console.log(modalCallCard);
