@@ -35,51 +35,66 @@ scrollToOtherpages.addEventListener('click', function(){
 
 
 // модальные окна
-// Home version1
 
-// let modalCallLists = document.querySelectorAll('.menu-list__items-nextitems');
-let modalCallCards = document.querySelectorAll('.section-cards__item');
+let modalCallLists = document.querySelectorAll('.menu-list__items-nextitems');
+let modalCallCards = document.querySelectorAll('.section-cards__inner');
 let modals = document.querySelectorAll('.modal');
-// let overlayCloses = document.querySelectorAll('.modal__overlay');
+let overlayCloses = document.querySelectorAll('.modal__overlay');
 let crossCloses = document.querySelectorAll('.modal__cross')
 
-console.log(modalCallCards);
-
-function modalOpen(event){
-    let modalCallCard = event.target;
-    let modalID = modalCallCard.getAttribute("data-target");
-    console.log(modalID);
-    let modal = document.getElementById(modalID);
-    console.log(modal);
-    if (modal){
-        console.log(modal);
-        modal.classList.add('modal--active');
-    }
-}
+// console.log(modalCallCards);
 
 modalCallCards.forEach(function(modalCallCard){
-    modalCallCard.addEventListener('click',modalOpen);
+    // console.log(modalCallCard);
+    modalCallCard.addEventListener('click', function (event){
+        console.log(event.target);
+        let modalCallElement = event.target;
+        // console.log(modalCallElement);
+        while (modalCallElement != modalCallCard){
+            modalCallElement = modalCallElement.parentNode;
+        }
+        let modalID = modalCallElement.getAttribute("data-target");
+        console.log(modalID);
+        let modal = document.getElementById(modalID);
+        console.log(modal);
+        if (modal){
+            modal.classList.add('modal--active');
+        }
+    });
 })
 
+modalCallLists.forEach(function(modalCallList){
+    // console.log(modalCallCard);
+    modalCallList.addEventListener('click', function (event){
+        console.log(event.target);
+        let modalCallElement = event.target;
+        // console.log(modalCallElement);
+        while (modalCallElement != modalCallList){
+            modalCallElement = modalCallElement.parentNode;
+        }
+        let modalID = modalCallElement.getAttribute("data-target");
+        console.log(modalID);
+        let modal = document.getElementById(modalID);
+        console.log(modal);
+        if (modal){
+            modal.classList.add('modal--active');
+        }
+    });
+})
 
+function modalClose (){
+    modals.forEach(function(modal){
+        modal.classList.remove('modal--active');
+    })
+}
 
-// modalCallList.addEventListener('click', function(modalOpen){
-//     modal.classList.add('modal--active');
-// })
+overlayCloses.forEach(function(overlayClose){
+    overlayClose.addEventListener('click', modalClose)
+})
 
-
-
-// modalCallCards.addEventListener('click', function(modalOpen){
-//     modal.classList.add('modal--active');
-// })
-
-// overlayClose.addEventListener('click', function(modalClose){
-//     modal.classList.remove('modal--active');
-// })
-
-// crossClose.addEventListener('click', function(modalClose){
-//     modal.classList.remove('modal--active');
-// })
+crossCloses.forEach(function(crossClose){
+    crossClose.addEventListener('click', modalClose)
+})
 
 
 

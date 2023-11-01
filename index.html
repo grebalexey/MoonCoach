@@ -28,17 +28,17 @@
                                 </svg>
                             </a>
                             <ul class="menu-list__items-nextlist">
-                                <li class="menu-list__items-nextitems" data-id="homeVer1">
+                                <li class="menu-list__items-nextitems" data-target="homeVer1">
                                     <a href="#">Home Version 1
                                         <img src="images/home1.jpg" alt="">
                                     </a>
                                 </li>
-                                <li class="menu-list__items-nextitems">
+                                <li class="menu-list__items-nextitems" data-target="homeVer2">
                                     <a href="#">Home Version 2
                                         <img src="images/home2.jpg" alt="">
                                     </a>
                                 </li>
-                                <li class="menu-list__items-nextitems">
+                                <li class="menu-list__items-nextitems" data-target="homeVer3">
                                     <a href="#">Home Version 3
                                         <img src="images/home3.jpg" alt="">
                                     </a>
@@ -230,8 +230,8 @@
                     <div class="page__section-title">Homepages</div>
                     <div class="page__section-desc">The homepage is the face of your business. Select one from three minimalistic and subtly animated homepages, to introduce your users to what you're doing.</div>
                     <div class="page__section-cards">
-                            <div data-target="homeVer1" class="cardHomepage1 section-cards__item">
-                                <div class="section-cards__inner">
+                            <div class="cardHomepage1 section-cards__item">
+                                <div data-target="homeVer1" class="section-cards__inner">
                                     <div class="section-cards__photo">
                                         <img src="images/home1.jpg" alt="">
                                     </div>
@@ -245,8 +245,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="cardHomepage2 section-cards__item" data-target="homeVer2">
-                                <div class="section-cards__inner">
+                            <div class="cardHomepage2 section-cards__item">
+                                <div data-target="homeVer2" class="section-cards__inner">
                                     <div class="section-cards__photo">
                                         <img src="images/home2.jpg" alt="">
                                     </div>
@@ -260,8 +260,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="cardHomepage3 section-cards__item" data-target="homeVer3">
-                                <div class="section-cards__inner">
+                            <div class="cardHomepage3 section-cards__item">
+                                <div data-target="homeVer3" class="section-cards__inner">
                                     <div class="section-cards__photo">
                                         <img src="images/home3.jpg" alt="">
                                     </div>
@@ -641,7 +641,7 @@
         <div class="modal__overlay"></div>
     </div>
 
-    <div class="modal" id="homeVer2">
+    <div class="modal" id="homeVer3">
         <div class="container modal__container">
             <div class="modal__inner">
                 <div class="modal__cross">
