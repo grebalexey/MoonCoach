@@ -34,7 +34,7 @@ scrollToOtherpages.addEventListener('click', function(){
 
 
 
-// модальные окна
+// МОДАЛЬНЫЕ ОКНА
 
 let modalCallLists = document.querySelectorAll('.menu-list__items-nextitems');
 let modalCallCards = document.querySelectorAll('.section-cards__inner');
@@ -99,5 +99,30 @@ crossCloses.forEach(function(crossClose){
 })
 
 
+// БУРГЕР МЕНЮ
 
+//вызов
 
+let burgerBtn = document.querySelector('.header-menu__burger-button');
+let burgerList = document.querySelector('.header-menu__burger-list');
+
+burgerBtn.addEventListener('click', ()=>{
+    burgerList.classList.add('burger--active');
+})
+
+// раскрытие списка
+
+let burgerItems = document.querySelectorAll('.burger-list__items');
+let burgerRows = document.querySelectorAll('.burger-list__items-nextlist');
+
+burgerItems.forEach(function(burgerItem){
+    burgerItem.addEventListener('click', function (event){
+        let burgerItemElement = event.target;
+        while (burgerItemElement != burgerItem){
+            burgerItemElement = burgerItemElement.parentNode;
+        }
+        let burgerRowID = burgerItemElement.getAttribute("data-target");
+        let burgerRow = document.getElementById(burgerRowID);
+        burgerRow.classList.add('burger-items--active');
+    })
+})

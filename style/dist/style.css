@@ -77,6 +77,11 @@ footer {
   justify-content: space-between;
   position: relative;
 }
+@media (max-width: 850px) {
+  .header__row {
+    position: static;
+  }
+}
 .header__menu {
   display: grid;
   justify-items: end;
@@ -185,6 +190,74 @@ footer {
   .header-menu__burger {
     display: block;
   }
+}
+.header-menu__burger-list {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #EFEEE8;
+  display: none;
+}
+.header-menu__burger-list.burger--active {
+  display: block;
+}
+
+.burger-list__items {
+  display: grid;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 27px 10px 27px 16px;
+  position: relative;
+}
+.burger-list__items + .burger-list__items {
+  margin-top: 15px;
+}
+.burger-list__items-nextlist {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #E4E2D3;
+  padding: 15px 20px 90px 0px;
+  justify-content: space-between;
+  transition: 0.3s;
+  border: 1px solid #333;
+  display: none;
+}
+.burger-list__items-nextlist.burger-items--active {
+  display: flex;
+}
+.burger-list__items-nextitems {
+  flex-shrink: 0;
+  width: 33.3%;
+  margin-top: 20px;
+}
+.burger-list__items-nextitems a {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+.burger-list__items-nextitems a:hover {
+  scale: 1.02;
+}
+.burger-list__items-nextitems a img {
+  margin-top: 10px;
+  width: 100%;
+}
+.burger-list__items svg {
+  transition: 0.3s;
+}
+.burger-list__items a {
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-self: center;
 }
 
 button {
@@ -801,6 +874,12 @@ button:hover svg {
 .modal__content {
   display: flex;
 }
+@media (max-width: 992px) {
+  .modal__content {
+    display: block;
+    position: relative;
+  }
+}
 .modal__inner {
   width: 100%;
   background: #E4E2D3;
@@ -808,9 +887,20 @@ button:hover svg {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 992px) {
+  .modal__inner-left {
+    margin-top: 65px;
+    margin-bottom: 20px;
+  }
+}
 .modal__inner-right {
   margin-left: 20px;
   margin-right: 40px;
+}
+@media (max-width: 992px) {
+  .modal__inner-right {
+    margin-left: 0;
+  }
 }
 .modal__inner-title {
   color: #333;
@@ -820,6 +910,13 @@ button:hover svg {
   font-weight: 700;
   line-height: 48px; /* 120% */
   margin-bottom: 20px;
+}
+@media (max-width: 992px) {
+  .modal__inner-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 .modal__inner-desc {
   color: rgba(51, 51, 51, 0.9);
