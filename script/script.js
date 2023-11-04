@@ -126,3 +126,19 @@ burgerItems.forEach(function(burgerItem){
         burgerRow.classList.add('burger-items--active');
     })
 })
+
+// раскрытие модальных окон из бургера
+
+let modalCallBurgers = document.querySelectorAll('.burger-list__items-nextitems');
+
+modalCallBurgers.forEach(function(modalCallBurger){
+    modalCallBurger.addEventListener('click', function (event){
+        let modalCallElement = event.target;
+        while (modalCallElement != modalCallBurger){
+            modalCallElement = modalCallElement.parentNode;
+        }
+        let modalID = modalCallElement.getAttribute("data-target");
+        let modal = document.getElementById(modalID);
+        modal.classList.add('modal--active');
+    })
+})
