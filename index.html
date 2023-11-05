@@ -157,14 +157,14 @@
                             </svg> 
                         </div>
                         <ul class="header-menu__burger-list">
-                            <li class="burger-list__items" data-target="burgerHome">
-                                <a class="burger-list__title" href="#">
+                            <li class="burger-list__items">
+                                <a class="burger-list__title" data-target="burgerHome" href="#">
                                     Homepages
                                 </a>
                                 <ul class="burger-list__items-nextlist" id="burgerHome">
-                                    <!-- <div class="burger-list__cross">
+                                    <div class="burger-list__cross">
                                         <img src="images/cross.svg" alt="">
-                                    </div> -->
+                                    </div>
                                     <div class="burger-list__cards">
                                         <li class="burger-list__items-nextitems" data-target="homeVer1">
                                             <a href="#">Home Version 1
@@ -201,23 +201,26 @@
 
                                 </ul>
                             </li>
-                            <li class="burger-list__items" data-target="burgerAbout">
-                                <a class="burger-list__title" href="#">
+                            <li class="burger-list__items">
+                                <a class="burger-list__title" data-target="burgerAbout" href="#">
                                     About Pages
                                 </a>
                                 <ul class="burger-list__items-nextlist" id="burgerAbout">
+                                    <div class="burger-list__cross">
+                                        <img src="images/cross.svg" alt="">
+                                    </div>
                                     <div class="burger-list__cards">
-                                        <li class="burger-list__items-nextitems" data-target="homeVer1">
+                                        <li class="burger-list__items-nextitems" data-target="aboutVer1">
                                             <a href="#">About Version 1
                                                 <img src="images/About1.jpg" alt="">
                                             </a>
                                         </li>
-                                        <li class="burger-list__items-nextitems" data-target="homeVer2">
+                                        <li class="burger-list__items-nextitems" data-target="aboutVer2">
                                             <a href="#">About Version 2
                                                 <img src="images/About2.jpg" alt="">
                                             </a>
                                         </li>
-                                        <li class="burger-list__items-nextitems" data-target="homeVer3">
+                                        <li class="burger-list__items-nextitems" data-target="aboutVer3">
                                             <a href="#">About Version 3
                                                 <img src="images/About3.jpg" alt="">
                                             </a>
@@ -241,63 +244,105 @@
                                     </div>
                                 </ul>
                             </li>
-                            <li class="burger-list__items" data-target="burgerBlog">
-                                <a class="burger-list__title" href="#">
+                            <li class="burger-list__items">
+                                <a class="burger-list__title" data-target="burgerBlog" href="#">
                                     Blog
                                 </a>
                                 <ul class="burger-list__items-nextlist" id="burgerBlog">
-                                    <li class="menu-list__items-nextitems">
-                                        <a href="#">Blog Overview
-                                            <img src="images/blog1.jpg" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="burger-list__items-nextitems">
-                                        <a href="#">Blog Category
-                                            <img src="images/blog2.jpg" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="burger-list__items-nextitems">
-                                        <a href="#">Blog detailed
-                                            <img src="images/blog3.jpg" alt="">
-                                        </a>
-                                    </li>
+                                    <div class="burger-list__cross">
+                                        <img src="images/cross.svg" alt="">
+                                    </div>
+                                    <div class="burger-list__cards">
+                                        <li class="burger-list__items-nextitems" data-target="blogVer1">
+                                            <a href="#">Blog Overview
+                                                <img src="images/blog1.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li class="burger-list__items-nextitems" data-target="blogVer2">
+                                            <a href="#">Blog Category
+                                                <img src="images/blog2.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li class="burger-list__items-nextitems" data-target="blogVer3">
+                                            <a href="#">Blog detailed
+                                                <img src="images/blog3.jpg" alt="">
+                                            </a>
+                                        </li>
+                                    </div>
+                                    <div class="burger-list__arrows">
+                                        <div class="burger-list__arrows-left">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="1" viewBox="0 0 38 1" fill="none">
+                                                <path d="M0 0H38V1H0V0Z" fill="#333333"/>
+                                                <path d="M22 0H38V1H22V0Z" fill="#333333"/>
+                                                <path d="M22 0H38V1H22V0Z" fill="#333333"/>
+                                            </svg>
+                                        </div>
+                                        <div class="burger-list__arrows-right">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="1" viewBox="0 0 38 1" fill="none">
+                                                <path d="M0 0H38V1H0V0Z" fill="#333333"/>
+                                                <path d="M22 0H38V1H22V0Z" fill="#333333"/>
+                                                <path d="M22 0H38V1H22V0Z" fill="#333333"/>
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </ul>
                             </li>
-                            <li class="burger-list__items" data-target="burgerOthers">
-                                <a class="burger-list__title" href="#">
+                            <li class="burger-list__items">
+                                <a class="burger-list__title" data-target="burgerOthers" href="#">
                                     Others
                                 </a>
                                 <ul class="burger-list__items-nextlist" id="burgerOthers">
-                                    <li class="menu-list__items-nextitems">
-                                        <a href="#">Contact 1
-                                            <img src="images/contact1.jpg" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="burger-list__items-nextitems">
-                                        <a href="#">Contact 2
-                                            <img src="images/contact2.jpg" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="burger-list__items-nextitems">
-                                        <a href="#">Contact 3
-                                            <img src="images/contact3.jpg" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="burger-list__items-nextitems">
-                                        <a href="#">Pricing
-                                            <img src="images/pricing.jpg" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="burger-list__items-nextitems">
-                                        <a href="#">Legal
-                                            <img src="images/legal.jpg" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="burger-list__items-nextitems">
-                                        <a href="#">404
-                                            <img src="images/404.jpg" alt="">
-                                        </a>
-                                    </li>
+                                    <div class="burger-list__cross">
+                                        <img src="images/cross.svg" alt="">
+                                    </div>
+                                    <div class="burger-list__cards">
+                                        <li class="burger-list__items-nextitems" data-target="othersVer1">
+                                            <a href="#">Contact 1
+                                                <img src="images/contact1.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li class="burger-list__items-nextitems" data-target="othersVer2">
+                                            <a href="#">Contact 2
+                                                <img src="images/contact2.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li class="burger-list__items-nextitems" data-target="othersVer3">
+                                            <a href="#">Contact 3
+                                                <img src="images/contact3.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li class="burger-list__items-nextitems" data-target="othersVer4">
+                                            <a href="#">Pricing
+                                                <img src="images/pricing.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li class="burger-list__items-nextitems" data-target="othersVer5">
+                                            <a href="#">Legal
+                                                <img src="images/legal.jpg" alt="">
+                                            </a>
+                                        </li>
+                                        <li class="burger-list__items-nextitems" data-target="othersVer6">
+                                            <a href="#">404
+                                                <img src="images/404.jpg" alt="">
+                                            </a>
+                                        </li>
+                                    </div>
+                                    <div class="burger-list__arrows">
+                                        <div class="burger-list__arrows-left">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="1" viewBox="0 0 38 1" fill="none">
+                                                <path d="M0 0H38V1H0V0Z" fill="#333333"/>
+                                                <path d="M22 0H38V1H22V0Z" fill="#333333"/>
+                                                <path d="M22 0H38V1H22V0Z" fill="#333333"/>
+                                            </svg>
+                                        </div>
+                                        <div class="burger-list__arrows-right">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="1" viewBox="0 0 38 1" fill="none">
+                                                <path d="M0 0H38V1H0V0Z" fill="#333333"/>
+                                                <path d="M22 0H38V1H22V0Z" fill="#333333"/>
+                                                <path d="M22 0H38V1H22V0Z" fill="#333333"/>
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </ul>
                             </li>
                             <li class="burger-list__items burger-list__items-last">

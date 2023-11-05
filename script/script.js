@@ -106,30 +106,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let burgerBtn = document.querySelector('.header-menu__burger-button');
     let burgerList = document.querySelector('.header-menu__burger-list');
+    let burgerRows = document.querySelectorAll('.burger-list__items-nextlist');
 
     burgerBtn.addEventListener('click', ()=>{
         burgerList.classList.add('burger--active');
     })
 
-    // раскрытие списка по клику и закрытие по клику на тот же пункт
+    // раскрытие списка по клику и закрытие при клике на другой раздел
 
-    let burgerTitles = document.querySelectorAll('.burger-list__title');
+    let burgerTitles = Array.from(document.querySelectorAll('.burger-list__title'));
+    let burgerCrosses = document.querySelectorAll('.burger-list__cross');
 
     burgerTitles.forEach(function(burgerTitle){
         burgerTitle.addEventListener('click', function (event){
-            let burgerItemElement = event.target;
             
-            burgerItemElement = burgerItemElement.parentNode;
+            let burgerRowActives = Array.from(document.querySelectorAll('.burger-items--active'));
+            burgerRowActives.forEach(function(burgerRowActive){
+                burgerRowActive.classList.remove('burger-items--active');
+            })
+
+            burgerCrosses.forEach(function(burgerCross){
+                burgerCross.classList.add('cross--active');
+            })
+            
+            let burgerItemElement = event.target;
             
             let burgerRowID = burgerItemElement.getAttribute("data-target");
             let burgerRow = document.getElementById(burgerRowID);
-            burgerRow.classList.toggle('burger-items--active');
+            burgerRow.classList.add('burger-items--active');
         })
     })
 
-    // закрытие списка при открытии другого списка
+    // закрытие списка при нажатии на крестик
 
-    
+    burgerCrosses.forEach(function(burgerCross){
+        burgerCross.addEventListener('click', function(){
+            burgerRows.forEach(function(burgerRow){
+                burgerRow.classList.remove('burger-items--active');
+            })
+            burgerCross.classList.remove('cross--active');
+        })
+    })
 
    
     // раскрытие модальных окон из бургера

@@ -222,6 +222,21 @@ footer {
   margin-left: 20px;
   padding: 20px;
 }
+.burger-list__cross {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px 5px 10px;
+  padding: 20px;
+  display: none;
+}
+.burger-list__cross.cross--active {
+  display: block;
+}
+.burger-list__cross img {
+  height: 20px;
+  width: 20px;
+}
 
 .burger-list__items {
   display: grid;
@@ -230,7 +245,6 @@ footer {
   font-weight: 400;
   line-height: 20px;
   padding: 27px 10px 27px 16px;
-  position: relative;
 }
 .burger-list__items + .burger-list__items {
   margin-top: 15px;
@@ -249,6 +263,10 @@ footer {
   transition: 0.3s;
   border: 1px solid #333;
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
 }
 .burger-list__items-nextlist.burger-items--active {
   display: flex;
@@ -269,7 +287,7 @@ footer {
 }
 .burger-list__items-nextitems a img {
   margin-top: 10px;
-  width: 100%;
+  max-width: 367px;
 }
 .burger-list__items svg {
   transition: 0.3s;
