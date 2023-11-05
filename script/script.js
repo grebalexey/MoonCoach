@@ -167,38 +167,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // слайдер в бургере
 
-    let slider = document.querySelector('.burger-list__cards');
-    let prevBtn = document. querySelector('.burger-list__arrows-left');
-    let nextBtn = document.querySelector('.burger-list__arrows-right');
-    let slides = Array.from(slider.querySelectorAll('.burger-list__items-nextitems'));
-    let slideCount = slides.length;
-    let slideIndex = 0;
+    // let slider = document.querySelector('.burger-list__cards');
+    // let prevBtn = document. querySelector('.burger-list__arrows-left');
+    // let nextBtn = document.querySelector('.burger-list__arrows-right');
+    // let slides = Array.from(slider.querySelectorAll('.burger-list__items-nextitems'));
+    // let slideCount = slides.length;
+    // let slideIndex = 0;
 
-    prevBtn.addEventListener('click', showPreviousSlide);
-    nextBtn.addEventListener('click', showNextSlide);
+    // prevBtn.addEventListener('click', showPreviousSlide);
+    // nextBtn.addEventListener('click', showNextSlide);
 
-    function showPreviousSlide() {
-        slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-        updateSlider();
-    }
+    // function showPreviousSlide() {
+    //     slideIndex = (slideIndex - 1 + slideCount) % slideCount;
+    //     updateSlider();
+    // }
     
 
-    function showNextSlide() {
-        slideIndex = (slideIndex + 1) % slideCount;
-        updateSlider();
+    // function showNextSlide() {
+    //     slideIndex = (slideIndex + 1) % slideCount;
+    //     updateSlider();
+    // }
+    
+    // function updateSlider() {
+    //     slides.forEach((slide, index) => {
+    //         if (index === slideIndex) {
+    //         slide.style.display = 'block';
+    //         } else {
+    //         slide.style.display = 'none';
+    //         }
+    //     });
+    // }
+    
+    // updateSlider();
+
+
+    let sliders = document.querySelectorAll('.burger-list__cards');
+    console.log(sliders);
+
+    let nextBtns = document.querySelectorAll('.burger-list__arrows-right');
+
+    for (let i = 0; i < sliders.length; i++) {
+        initSlider(sliders[i]);
     }
     
-    function updateSlider() {
-        slides.forEach((slide, index) => {
-            if (index === slideIndex) {
-            slide.style.display = 'block';
-            } else {
-            slide.style.display = 'none';
-            }
-        });
+    function initSlider(slider){
+        let slide = slider.querySelectorAll('.burger-list__items-nextitems');
+        let nextBtn = slider.querySelector('.burger-list__arrows-right');
+        let i = 0;
+        nextBtn.addEventListener('click', function(){
+            slide[i].style.display = 'none';
+            i = (i + 1) % slide.length;
+            slide[i].style.display = 'block';
+        })
     }
-    
-    updateSlider();
 
 
 })
