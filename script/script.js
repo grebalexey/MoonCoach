@@ -111,23 +111,27 @@ document.addEventListener("DOMContentLoaded", () => {
         burgerList.classList.add('burger--active');
     })
 
-    // раскрытие списка
+    // раскрытие списка по клику и закрытие по клику на тот же пункт
 
-    let burgerItems = document.querySelectorAll('.burger-list__items');
-    let burgerRows = document.querySelectorAll('.burger-list__items-nextlist');
+    let burgerTitles = document.querySelectorAll('.burger-list__title');
 
-    burgerItems.forEach(function(burgerItem){
-        burgerItem.addEventListener('click', function (event){
+    burgerTitles.forEach(function(burgerTitle){
+        burgerTitle.addEventListener('click', function (event){
             let burgerItemElement = event.target;
-            while (burgerItemElement != burgerItem){
-                burgerItemElement = burgerItemElement.parentNode;
-            }
+            
+            burgerItemElement = burgerItemElement.parentNode;
+            
             let burgerRowID = burgerItemElement.getAttribute("data-target");
             let burgerRow = document.getElementById(burgerRowID);
-            burgerRow.classList.add('burger-items--active');
+            burgerRow.classList.toggle('burger-items--active');
         })
     })
 
+    // закрытие списка при открытии другого списка
+
+    
+
+   
     // раскрытие модальных окон из бургера
 
     let modalCallBurgers = document.querySelectorAll('.burger-list__items-nextitems');
@@ -154,7 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let slideIndex = 0;
 
     prevBtn.addEventListener('click', showPreviousSlide);
-    console.log(prevBtn);
     nextBtn.addEventListener('click', showNextSlide);
 
     function showPreviousSlide() {
