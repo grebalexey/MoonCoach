@@ -264,6 +264,34 @@ footer{
     }
 }
 
+.burger-list{
+
+    &__cards{
+        display: flex;
+        
+    }
+
+    &__arrows{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+        padding: 0 20px;
+
+        &-right{
+            padding: 20px;
+        }
+
+        &-left{
+            // transform: rotate(180deg);
+            // transform-origin: bottom;
+            margin-left: 20px;
+            padding: 20px;
+        }
+    }
+}
+
 .burger-list__items{
     display: grid;
     justify-content: center;
@@ -281,10 +309,12 @@ footer{
         width: 100%;
         margin-top: 20px;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        flex-wrap: nowrap;
         align-items: center;
+        overflow: hidden;
         background-color: #E4E2D3;
-        padding: 15px 20px 90px 0px;
+        padding: 15px 20px 20px 0px;
         justify-content: space-between;
         transition: 0.3s;
         // transform: rotateX(90deg);
@@ -299,7 +329,7 @@ footer{
 
     &-nextitems{
         flex-shrink: 0;
-        width: 33.3%;
+        width: 100%;
         margin-top: 20px;
         
         a{
@@ -987,6 +1017,16 @@ button{
     visibility: hidden;
     opacity: 0;
 
+    @include _850{
+        // position: absolute;
+        // display: flex;
+        // width: 100%;
+        // height: 100%;
+        // background: none; 
+        // top: 70%;
+        // left: 50%;
+    }
+
     &.modal--active{
         visibility: visible;
         opacity: 1;
@@ -1016,6 +1056,10 @@ button{
 
     &__container{
         z-index: 2;
+
+        @include _850{
+            padding: 0;
+        }
     }
 
     &__content{
@@ -1074,6 +1118,10 @@ button{
             font-weight: 400;
             line-height: 29.7px; /* 165% */
             margin-bottom: 20px;
+
+            @include _850{
+                display: none;
+            }
         }
         
     }
