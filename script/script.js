@@ -109,8 +109,24 @@ document.addEventListener("DOMContentLoaded", () => {
     let burgerRows = document.querySelectorAll('.burger-list__items-nextlist');
 
     burgerBtn.addEventListener('click', ()=>{
-        burgerList.classList.add('burger--active');
+        burgerList.classList.toggle('burger--active');
+        let burgerActive = document.querySelector('.burger--active');
+        console.log (burgerActive);
+        let body = document.querySelector('body');
+
+        if (burgerActive){
+            body.style.position = 'fixed';
+        } else {
+            body.style.position = 'static';
+        }
+        
     })
+
+    // burgerBtn.addEventListener('click', ()=>{
+    //     burgerList.classList.remove('burger--active');
+    //     let body = document.querySelector('body');
+    //     body.style.position = 'static';
+    // })
 
     // раскрытие списка по клику и закрытие при клике на другой раздел
 
@@ -167,59 +183,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // слайдер в бургере
 
-    // let slider = document.querySelector('.burger-list__cards');
-    // let prevBtn = document. querySelector('.burger-list__arrows-left');
-    // let nextBtn = document.querySelector('.burger-list__arrows-right');
-    // let slides = Array.from(slider.querySelectorAll('.burger-list__items-nextitems'));
-    // let slideCount = slides.length;
-    // let slideIndex = 0;
-
-    // prevBtn.addEventListener('click', showPreviousSlide);
-    // nextBtn.addEventListener('click', showNextSlide);
-
-    // function showPreviousSlide() {
-    //     slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-    //     updateSlider();
-    // }
-    
-
-    // function showNextSlide() {
-    //     slideIndex = (slideIndex + 1) % slideCount;
-    //     updateSlider();
-    // }
-    
-    // function updateSlider() {
-    //     slides.forEach((slide, index) => {
-    //         if (index === slideIndex) {
-    //         slide.style.display = 'block';
-    //         } else {
-    //         slide.style.display = 'none';
-    //         }
-    //     });
-    // }
-    
-    // updateSlider();
-
-
-    let sliders = document.querySelectorAll('.burger-list__cards');
-    console.log(sliders);
-
     let nextBtns = document.querySelectorAll('.burger-list__arrows-right');
+    let prevBtns = document.querySelectorAll('.burger-list__arrows-left');
+    let slideIndex = 0;
 
-    for (let i = 0; i < sliders.length; i++) {
-        initSlider(sliders[i]);
-    }
-    
-    function initSlider(slider){
-        let slide = slider.querySelectorAll('.burger-list__items-nextitems');
-        let nextBtn = slider.querySelector('.burger-list__arrows-right');
-        let i = 0;
-        nextBtn.addEventListener('click', function(){
-            slide[i].style.display = 'none';
-            i = (i + 1) % slide.length;
-            slide[i].style.display = 'block';
+    nextBtns.forEach(nextBtn =>{
+        nextBtn.addEventListener('click', (event)=>{
+            let slider = event.target.closest('.burger-list__cards');
+            let slides = slider.querySelectorAll('.burger-list__items-nextitems');
+            let slideCount = slides.length;
+            slideIndex = (slideIndex + 1) % slideCount;
+            function updateSlider (){
+                slides.forEach((slide, index) => {
+                    if (index === slideIndex) {
+                    slide.style.display = 'block';
+                    } else {
+                    slide.style.display = 'none';
+                    }
+                });
+            }
+            updateSlider ();
         })
-    }
+    })
+
+    prevBtns.forEach(prevBtn =>{
+        prevBtn.addEventListener('click', (event)=>{
+            let slider = event.target.closest('.burger-list__cards');
+            let slides = slider.querySelectorAll('.burger-list__items-nextitems');
+            let slideCount = slides.length;
+            slideIndex = (slideIndex - 1 + slideCount) % slideCount;
+            function updateSlider (){
+                slides.forEach((slide, index) => {
+                    if (index === slideIndex) {
+                    slide.style.display = 'block';
+                    } else {
+                    slide.style.display = 'none';
+                    }
+                });
+            }
+            updateSlider ();
+        })
+    })
 
 
 })

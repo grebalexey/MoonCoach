@@ -277,7 +277,11 @@ footer{
         justify-content: space-between;
         width: 100%;
         margin-top: 20px;
+        margin-bottom: 20px;
         padding: 0 20px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
 
         &-right{
             padding: 20px;
@@ -317,7 +321,6 @@ footer{
     font-weight: 400;
     line-height: 20px;
     padding: 27px 10px 27px 16px;
-    // position: relative;
 
     & + & {
         margin-top: 15px;
@@ -332,7 +335,7 @@ footer{
         align-items: center;
         overflow: hidden;
         background-color: #E4E2D3;
-        padding: 15px 20px 20px 0px;
+        padding: 15px 20px 70px 0px;
         justify-content: space-between;
         transition: 0.3s;
         // transform: rotateX(90deg);
@@ -1035,7 +1038,7 @@ button{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index:100;
+    z-index:300;
     visibility: hidden;
     opacity: 0;
 

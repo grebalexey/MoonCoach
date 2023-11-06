@@ -213,7 +213,11 @@ footer {
   justify-content: space-between;
   width: 100%;
   margin-top: 20px;
+  margin-bottom: 20px;
   padding: 0 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 .burger-list__arrows-right {
   padding: 20px;
@@ -258,7 +262,7 @@ footer {
   align-items: center;
   overflow: hidden;
   background-color: #E4E2D3;
-  padding: 15px 20px 20px 0px;
+  padding: 15px 20px 70px 0px;
   justify-content: space-between;
   transition: 0.3s;
   border: 1px solid #333;
@@ -882,7 +886,7 @@ button:hover svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 100;
+  z-index: 300;
   visibility: hidden;
   opacity: 0;
 }
